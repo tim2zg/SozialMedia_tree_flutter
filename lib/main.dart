@@ -318,6 +318,29 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),),
                       SizedBox(height: 25,),
+                      ButtonTheme(
+                        child: OutlinedButton(
+                          style: ButtonStyle(
+                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  side: BorderSide(width: 7, color: Colors.red),
+                                ),
+                              ),side: MaterialStateProperty.all(BorderSide(width: 2.0, color: Colors.black))
+                          ),
+                          onPressed: () => _launchURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
+                          child: Column( // Replace with a Row for horizontal icon + text
+                            children: <Widget>[
+                              Icon(FontAwesomeIcons.mailBulk, color: Colors.white, size: 80),
+                              SizedBox(height:  5),
+                              FittedBox(
+                                fit: BoxFit.fitWidth,
+                                child: Text('Email', style: TextStyle(fontSize: 20, color: Colors.white),),
+                              ),
+                            ],
+                          ),
+                        ),),
+                      SizedBox(height: 25,),
                     ],
                   ),),)
               ),
